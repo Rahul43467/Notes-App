@@ -28,13 +28,15 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding=FragmentSplashBinding.inflate(layoutInflater,container,false)
-        return binding.root
+
 
         Handler(Looper.getMainLooper()).postDelayed(object:Runnable{
             override fun run() {
                 findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
             }
         },2000)
+
+        return binding.root
 
     }
 
