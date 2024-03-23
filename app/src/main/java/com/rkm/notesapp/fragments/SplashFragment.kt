@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 
 import com.rkm.notesapp.R
 import com.rkm.notesapp.databinding.FragmentSplashBinding
@@ -31,7 +32,7 @@ class SplashFragment : Fragment() {
 
         Handler(Looper.getMainLooper()).postDelayed(object:Runnable{
             override fun run() {
-                Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_homeFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
             }
         },2000)
 
