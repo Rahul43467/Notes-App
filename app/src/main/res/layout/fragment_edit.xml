@@ -55,11 +55,16 @@
             android:id="@+id/note"
             android:padding="10dp"
             android:layout_marginTop="30dp"
-            android:maxLines="10"
+            android:gravity="start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lines="10"
+            android:minHeight="500dp"
+            android:windowSoftInputMode="adjustPan"
             android:inputType="text" />
+
+       
+
+
 
     </LinearLayout>
 
