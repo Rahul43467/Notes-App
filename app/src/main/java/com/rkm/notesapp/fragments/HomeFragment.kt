@@ -36,16 +36,6 @@ class HomeFragment : Fragment() {
     ): View? {
         binding=FragmentHomeBinding.inflate(layoutInflater,container,false)
 
-
-
-
-
-
-
-
-
-
-
         NotesviewModel.readnote().observe(viewLifecycleOwner,{
             oldnote = it as  ArrayList<notes>
 
@@ -60,6 +50,18 @@ class HomeFragment : Fragment() {
         binding.addbutton.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_editFragment)
         }
+
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            android.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                notefilter(newText)
+                return true
+            }
+        })
 
         return binding.root
 

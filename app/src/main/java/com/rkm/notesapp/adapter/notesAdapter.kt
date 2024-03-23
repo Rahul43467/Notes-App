@@ -38,6 +38,7 @@ class notesAdapter(var list:List<notes>, val context: Context):RecyclerView.Adap
 
 
 
+
             }
             binding.root.setOnClickListener {
                 val action = HomeFragmentDirections.actionHomeFragmentToUpdateFragment(model)
@@ -45,6 +46,7 @@ class notesAdapter(var list:List<notes>, val context: Context):RecyclerView.Adap
                 findNavController(it).navigate(action)
 
             }
+            
 
         }
 
