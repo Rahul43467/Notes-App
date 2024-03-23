@@ -48,17 +48,24 @@
 
 
         <EditText
+            android:id="@+id/Notes"
             android:hint="Notes ...."
-            android:textColorHint="@color/black"
-            android:background="@drawable/buttonbackground"
-            android:id="@+id/note"
-            android:padding="10dp"
-            android:layout_marginTop="30dp"
-            android:maxLines="10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lines="10"
-            android:inputType="text" />
+            android:background="@drawable/buttonbackground"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:textColorHint="@color/black"
+            android:ems="10"
+            android:gravity="start|top"
+            android:minHeight="500dp"
+            android:windowSoftInputMode="adjustPan"
+            android:inputType="textMultiLine" />
+
+
+
+
+
 
     </LinearLayout>
 

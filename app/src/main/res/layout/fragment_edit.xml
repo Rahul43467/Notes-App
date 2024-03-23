@@ -47,14 +47,38 @@
            android:hint="Title ...."
             android:textColorHint="@color/black"/>
 
+        <LinearLayout
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/redpriority"
+                android:background="@drawable/reddot"
+                android:layout_marginRight="20dp"
+                android:layout_width="20dp"
+                android:src="@drawable/yes"
+                android:layout_height="20dp"/>
+
+            <ImageView
+                android:id="@+id/greenpriority"
+                android:layout_width="20dp"
+                android:src="@drawable/greendot"
+                android:layout_height="20dp"/>
+
+        </LinearLayout>
+
 
         <EditText
-            android:id="@+id/Notes"
+            android:id="@+id/notes"
             android:hint="Notes ...."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/buttonbackground"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:padding="10dp"
             android:textColorHint="@color/black"
             android:ems="10"
