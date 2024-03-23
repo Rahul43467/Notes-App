@@ -3,14 +3,23 @@ package com.rkm.notesapp.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
+
 import androidx.recyclerview.widget.RecyclerView
 import com.rkm.notesapp.R
 import com.rkm.notesapp.databinding.HomeItemBinding
+
 import com.rkm.notesapp.datamodel.notes
+import com.rkm.notesapp.fragments.HomeFragmentDirections
 
-class notesAdapter(val list:List<notes>,val context: Context):RecyclerView.Adapter<notesAdapter.notesViewholder>() {
+class notesAdapter(var list:List<notes>, val context: Context):RecyclerView.Adapter<notesAdapter.notesViewholder>() {
 
-    class notesViewholder(val binding: HomeItemBinding):RecyclerView.ViewHolder(binding.root){
+        fun filtering(newfilterlist: ArrayList<notes>){
+            list = newfilterlist
+            notifyDataSetChanged()
+        }
+
+    class notesViewholder(val binding:HomeItemBinding):RecyclerView.ViewHolder(binding.root){
 
         fun bind(context: Context,model:notes){
 
@@ -26,6 +35,14 @@ class notesAdapter(val list:List<notes>,val context: Context):RecyclerView.Adapt
                 date.text=model.date
                 notes.text=model.title
 
+
+
+
+            }
+            binding.root.setOnClickListener {
+                val action = HomeFragmentDirections.actionHomeFragmentToUpdateFragment(model)
+
+                findNavController(it).navigate(action)
 
             }
 

@@ -26,6 +26,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -35,54 +36,98 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <EditText
-            android:background="@drawable/buttonbackground"
             android:id="@+id/title"
-            android:padding="10dp"
-            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonbackground"
+            android:hint="Title ...."
             android:inputType="text"
             android:lines="1"
-            android:hint="Title ...."
-            android:textColorHint="@color/black"/>
+            android:padding="10dp"
+            android:textColorHint="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/redpriority"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+
+                android:background="@drawable/reddot" />
+
+            <ImageView
+                android:id="@+id/greenpriority"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:background="@drawable/greendot" />
+
+        </LinearLayout>
 
 
         <EditText
-            android:id="@+id/Notes"
-            android:hint="Notes ...."
+            android:id="@+id/notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:background="@drawable/buttonbackground"
-            android:layout_marginTop="30dp"
-            android:padding="10dp"
-            android:textColorHint="@color/black"
             android:ems="10"
             android:gravity="start|top"
+            android:hint="Notes ...."
+            android:inputType="textMultiLine"
             android:minHeight="500dp"
-            android:windowSoftInputMode="adjustPan"
-            android:inputType="textMultiLine" />
-
-
-
-
+            android:padding="10dp"
+            android:textColorHint="@color/black"
+            android:windowSoftInputMode="adjustPan" />
 
 
     </LinearLayout>
 
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/updatebutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:backgroundTint="#8BC34A"
-        android:clickable="true"
-        android:src="@drawable/yes"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/deletebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#F44336"
+            android:clickable="true"
+            android:src="@drawable/delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/updatebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#8BC34A"
+            android:clickable="true"
+            android:src="@drawable/yes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

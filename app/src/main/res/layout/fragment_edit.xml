@@ -53,21 +53,22 @@
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_height="40dp">
+            android:layout_height="50dp">
 
             <ImageView
                 android:id="@+id/redpriority"
                 android:background="@drawable/reddot"
                 android:layout_marginRight="20dp"
-                android:layout_width="20dp"
-                android:src="@drawable/yes"
-                android:layout_height="20dp"/>
+                android:layout_width="30dp"
+
+                android:layout_height="30dp"/>
 
             <ImageView
                 android:id="@+id/greenpriority"
-                android:layout_width="20dp"
-                android:src="@drawable/greendot"
-                android:layout_height="20dp"/>
+                android:layout_width="30dp"
+                android:background="@drawable/greendot"
+
+                android:layout_height="30dp"/>
 
         </LinearLayout>
 
